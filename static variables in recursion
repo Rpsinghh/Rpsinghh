@@ -1,0 +1,34 @@
+#include<stdio.h>
+int fun(int x)
+{
+static int x=0;
+if (n>0)
+{
+return fun(n-1)+x;//if we not use the x then it is not static and the 4th line also have to cut for the variable come over in normal format//
+}
+return 0;
+}
+main()
+{
+int a=5;
+printf("%d",fun(a));
+}
+//static for global variable//
+#include<stdio.h>
+int fun(int n)
+{
+statifc int x=0;//without this the function is normal//
+if (n>0)
+{
+x++;//without this the function is not static//
+return fun(n-1)+x;
+}
+return 0;
+}
+int main()
+{
+int r;
+r=fun(5);
+printf("%d",r);
+return 0;
+}
